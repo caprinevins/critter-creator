@@ -38,7 +38,13 @@ critter.name = name;
   }
 
 var legs = prompt(
-  "How many legs does " + critter.name + "have? Must be a number between 0-100");
+  "How many legs does " + critter.name + " have? Must be a number between 0-100");
 
+var parsedLegs = parseInt(legs);
 
+if(parsedLegs >= 0 && parsedLegs <= 100){
+  critter.legs = parsedLegs;
+}
+
+console.log(critter);
 
