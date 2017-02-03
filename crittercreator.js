@@ -15,6 +15,7 @@
 		○ If value is "no", set to false
 		○ If value is neither, ask again;
 		○ If value is good, set to "housebroken"
+        o Accept any case of yes or no
 	
 Loop through object, output each value to console*/
 
@@ -46,5 +47,18 @@ if(parsedLegs >= 0 && parsedLegs <= 100){
   critter.legs = parsedLegs;
 }
 
-console.log(critter);
+var houseBroken = prompt("House Broken or PEE EVERYWHERE? Enter 'Yes' or 'No', if you dare.");
 
+if(houseBroken == "yes"){
+  critter.houseBroken = true;
+} else if (houseBroken == "no"){
+  critter.houseBroken = false;
+} else {
+  //ask again//
+}
+
+for (var key in critter) {
+  console.log(key);
+  console.log(critter[key]);
+  
+}
